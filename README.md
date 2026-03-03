@@ -70,24 +70,27 @@ flowchart TD
 
 ### 3.1 AHT20 数据换算
 
-设原始 20-bit 湿度值为 $S_{RH}$，温度值为 $S_T$，则：
+设原始 20-bit 湿度值记为 `S_RH`，温度值记为 `S_T`，则：
 
-$$
-\mathrm{RH}(\%)=\frac{S_{RH}}{2^{20}}\times100
-$$
+```math
+RH = \frac{S_{RH}}{2^{20}} \times 100
+```
 
-$$
-T_{\mathrm{AHT20}}\left(^\circ\mathrm{C}\right)=\frac{S_T}{2^{20}}\times200-50
-$$
+```math
+T_{AHT20}(^\circ C)=\frac{S_T}{2^{20}} \times 200 - 50
+```
 
-其中 $2^{20}=1048576$，因此也可写为：
+其中 `2^20 = 1048576`，因此也可写为：
 
-$$
-\mathrm{RH}(\%)=\frac{S_{RH}}{1048576}\times100,\quad
-T_{\mathrm{AHT20}}\left(^\circ\mathrm{C}\right)=\frac{S_T}{1048576}\times200-50
-$$
+```math
+RH = \frac{S_{RH}}{1048576} \times 100
+```
 
-符号说明：$\mathrm{RH}$ 表示相对湿度（Relative Humidity），$T_{\mathrm{AHT20}}$ 表示 AHT20 计算温度。
+```math
+T_{AHT20}(^\circ C)=\frac{S_T}{1048576} \times 200 - 50
+```
+
+符号说明：`RH` 表示相对湿度（Relative Humidity），`T_AHT20` 表示 AHT20 计算温度。
 
 ### 3.2 NTC 温度计算（Steinhart-Hart）
 
