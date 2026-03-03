@@ -182,7 +182,16 @@ AHT20 T=26.41 C, H=52.83 %RH | NTC T=26.09 C | AVG T=26.25 C
 
 ---
 
-## 8. 参考资料
+## 8. 开源硬件链接
+
+- 项目硬件开源页面（OSHWHub）：  
+  [example-engineering-of-temperature-and-humidity-sensor](https://oshwhub.com/sun-yat-sen-university-venom-tea/example-engineering-of-temperature-and-humidity-sensor)
+
+简介：该页面作为本项目对应的硬件开源入口，便于同学统一查看与下载硬件设计资料。培训中建议优先对照该页面核验板级连接、接口定义与器件信息；原理图、PCB、BOM 及工程文件以页面实际发布内容为准。
+
+---
+
+## 9. 参考资料
 
 1. AHT20 Datasheet  
 2. SSD1306 Datasheet  
