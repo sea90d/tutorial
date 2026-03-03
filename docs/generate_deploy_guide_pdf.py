@@ -339,15 +339,6 @@ def build_story(font_name: str, styles: dict[str, ParagraphStyle]) -> list:
     story.append(Paragraph("6. 培训验收建议（可量化）", styles["h1"]))
     story.append(Paragraph("1) 代码可独立拉取与编译；2) 板卡可稳定运行 30 分钟；3) 串口每秒输出有效数据；4) OLED 显示与串口一致；5) 能解释关键外设映射与数据链路。", styles["body"]))
 
-    story.append(Spacer(1, 0.8 * cm))
-    story.append(Paragraph("附：一键重新生成 PDF", styles["h1"]))
-    story.append(
-        Preformatted(
-            "python docs/generate_deploy_guide_pdf.py",
-            styles["code"],
-        )
-    )
-
     return story
 
 
