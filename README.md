@@ -73,11 +73,18 @@ flowchart TD
 设原始 20-bit 湿度值为 $S_{RH}$，温度值为 $S_T$，则：
 
 $$
-RH(\%)=\frac{S_{RH}}{2^{20}}\times100
+\mathrm{RH}(\%)=\frac{S_{RH}}{2^{20}}\times100
 $$
 
 $$
-T_{AHT20}(^\circ C)=\frac{S_T}{2^{20}}\times200-50
+T_{\mathrm{AHT20}}\left(^\circ\mathrm{C}\right)=\frac{S_T}{2^{20}}\times200-50
+$$
+
+其中 $2^{20}=1048576$，因此也可写为：
+
+$$
+\mathrm{RH}(\%)=\frac{S_{RH}}{1048576}\times100,\quad
+T_{\mathrm{AHT20}}\left(^\circ\mathrm{C}\right)=\frac{S_T}{1048576}\times200-50
 $$
 
 ### 3.2 NTC 温度计算（Steinhart-Hart）
@@ -176,4 +183,3 @@ AHT20 T=26.41 C, H=52.83 %RH | NTC T=26.09 C | AVG T=26.25 C
 2. SSD1306 Datasheet  
 3. STM32G0 HAL Documentation  
 4. Steinhart, J. S., & Hart, S. R. (1968). Calibration curves for thermistors
-
